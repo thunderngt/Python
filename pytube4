@@ -1,0 +1,20 @@
+# Importar o pytube
+import pytube
+
+# Pedir ao usuário para inserir a URL do vídeo do YouTube
+url = input("Insira a URL do vídeo: ")
+
+# Criar um objeto YouTube com a URL do vídeo
+yt = pytube.YouTube(url)
+
+# Selecionar o stream de vídeo mais alto e obter o link de download
+video = yt.streams.filter(only_audio=True).first()
+download_url = video.url
+
+# Baixar o vídeo em MP3
+video.download("C:/Users/Cliente/Music")
+
+# Renomear o arquivo baixado para que ele tenha a extensão .mp3
+import os
+os.rename("C:/Users/Cliente/Music/{}".format(video.default_filename),
+            "C:/Users/Cliente/Music/{}.mp3".format(os.path.splitext(video.default_filename)[0]))
