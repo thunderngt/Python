@@ -1,7 +1,7 @@
 valor = 0.0
 parada = 1
 while (parada != 0):
-    lista = [1, 2, 3, 5, 9]
+    lista = [501, 745, 384, 2, 7]
     list = [0.5, 1, 4, 7, 8]
     code = int(input('Digite o código do produto comprado:'))
     if code == 0:

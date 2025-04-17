@@ -14,4 +14,4 @@ while (parada != 0):
         quant = int(input('Digite a quantidade do produto:'))
         for i in range (5):
             if code == lista[i]:
-                valor += list [i] * quant 
+                valor == 0
